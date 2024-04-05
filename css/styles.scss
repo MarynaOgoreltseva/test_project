@@ -1,0 +1,250 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button,
+input,
+textarea {
+    border: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1242px;
+    &_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_footer {
+        max-width: 1259px;
+    }
+}
+
+.title {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 900;
+    &_big {
+        font-size: 55px;
+        line-height: 70px;
+        
+        & span {
+            color: #B82121;
+        }
+    }
+    &_medium {
+        font-size: 48px;
+    }
+}
+
+.logo {
+    background: url(../img/logo.svg);
+    width: 133px;
+    height: 66px;
+}
+
+/*header styles*/
+.header {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    &__wrap-contacts{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+    &__social-row {
+        display: flex;
+        gap: 15px;
+    }
+    & .icon-phone-call {
+        margin-right: 10px;
+    }
+    &__tel-number {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+    }
+    &__burger {
+        display: none;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        list-style: none;
+    }
+    &__link {
+        color: #fff;
+        font-weight: 500;
+    }
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.btn-burger {
+    display: none;
+    padding: 4px 0;
+    width: 30px;
+    border-top: 2.5px solid #fff;
+    border-bottom: 2.5px solid #fff;
+    height: 30px;
+    &::before {
+        content: '';
+        width: 30px;
+        height: 2.5px;
+        background-color: #fff;
+        position: absolute;
+        top: 31px;
+    }
+}
+
+/*hero-section styles*/
+.hero {
+    background-image: linear-gradient(#000, 5%, #fff),
+                    url(../img/hero-bg.png);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    padding: 206px 0 176px 0;
+    // &::before {
+    //     content: "";
+    //     height: 183px;
+    //     background: linear-gradient(#000 32%, #fff);
+    //     position: absolute;
+    //     z-index: 20;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     opacity: 60%;
+
+    // }
+    &__title-block {
+        max-width: 607px;
+        width: 100%;
+    }
+    &__title {
+        margin-bottom: 95px;
+    }
+    &__text {
+        max-width: 501px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+    &__btn {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 900;
+        padding: 21px 49px 20px;
+        border-radius: 5px;
+        background-color: #B82121;
+    }
+}
+
+/*menu styles*/
+.menu {
+    &__desc {
+        padding: 50px 0 62px;
+    }
+}
+.desc-block {
+    background-color: #000;
+    
+    text-align: center;
+    &__title {
+        margin-bottom: 25px;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 632px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+}
+
+/*gallery styles*/
+.gallery {
+    position: relative;
+    background-color: #000;
+    &__desc {
+        padding: 144px 0 62px;
+    }
+    &__pic {
+        transform: rotate(-360deg);
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 258px;
+        height: 223px;
+    }
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: 2;
+        gap: 2px;
+
+    }
+}
+
+/*foter styles*/
+.footer {
+    background-color: #000;
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__contacts-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        & .icon {
+            font-size: 20px;
+        }
+    }
+    &__tel {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+    }
+}
