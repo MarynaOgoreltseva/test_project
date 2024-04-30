@@ -34,9 +34,9 @@ $('#slider2').slick({
     arrows: false,
     slidesToShow: 1,
         slidesToScroll: 1,
-     responsive: [
+        responsive: [
         {
-           breakpoint: 500,
+           breakpoint: 580,
            settings: "unslick"
         }
      ]

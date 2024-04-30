@@ -203,22 +203,28 @@ a {
     &__item-link {
         display: block;
         height: 508px;
+        background-image: url("../img/gal1.png");
+            background-position: center;
+            background-size: cover;
+            height: 508px;
+            width: 288px;
     }
     &__item {
         // max-width: 288px;
         position: relative;
         height: 100%;
+        
     }
-    &__item-img {
-        height: 508px;
-    }
+    // &__item-img {
+    //     height: 508px;
+    // }
     &__btn {
         display: inline-block;
         padding: 20px 55px;
         text-transform: uppercase;
         color: #fff;
         font-weight: 900;
-        font-size: 14;
+        font-size: 14px;
         border-radius: 5px;
         background-color: #000;
         opacity: 0.65;
@@ -228,6 +234,7 @@ a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        white-space: nowrap;
         &:hover {
             background-color: #B82121;
             display: inline-block;
@@ -462,7 +469,13 @@ a {
             }
         }
 }
-
+@media screen and (max-width:580px) {
+    .menu {
+            &__item-link {
+                width: 100%;
+            }
+        }
+}
 
 @media screen and (max-width:375px) {
     .title {
@@ -482,6 +495,15 @@ a {
         }
         &__text {
             margin-bottom: 30px;
+        }
+    }
+    .menu {
+        &__item-link {
+            width: 355px;
+            height: 300px;
+        }
+        &__name {
+            transform: translate(-50%, -90%);
         }
     }
     .gallery {
