@@ -10,14 +10,14 @@ $('#slider1').slick({
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1
       }
       },
     {
       breakpoint: 900,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1
       }
     },
@@ -36,7 +36,7 @@ $('#slider2').slick({
         slidesToScroll: 1,
         responsive: [
         {
-           breakpoint: 580,
+           breakpoint: 400,
            settings: "unslick"
         }
      ]
