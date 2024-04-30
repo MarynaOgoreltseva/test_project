@@ -36,7 +36,7 @@ $('#slider2').slick({
         slidesToScroll: 1,
      responsive: [
         {
-           breakpoint: 375,
+           breakpoint: 500,
            settings: "unslick"
         }
      ]
