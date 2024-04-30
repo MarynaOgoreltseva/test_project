@@ -248,6 +248,7 @@ a {
   font-size: 24px;
   font-weight: 800;
   z-index: 1;
+  white-space: nowrap;
 }
 
 .desc-block {
