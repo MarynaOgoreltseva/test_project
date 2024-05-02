@@ -46,6 +46,17 @@ ul {
 .main {
     color: #000;
     font-family: "Noto Sans", sans-serif;
+    &__link {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     &__top-line {
         margin-bottom: 0;
     }
@@ -101,7 +112,7 @@ ul {
 }
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:500px) {
     .pic-line {
         grid-template-columns: repeat(2, 2fr);
         gap: 20px;

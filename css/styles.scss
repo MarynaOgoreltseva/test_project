@@ -121,28 +121,10 @@ a {
     display: none;
 }
 
-.btn-burger {
-    display: none;
-    padding: 4px 0;
-    width: 30px;
-    border-top: 2.5px solid #fff;
-    border-bottom: 2.5px solid #fff;
-    height: 30px;
-    background-color: transparent;
-    position: relative;
-    &::before {
-        content: '';
-        width: 30px;
-        height: 2.5px;
-        background-color: #fff;
-        position: absolute;
-        right: 0;
-        
-    }
-    &:hover {
-        cursor: pointer;
-    }
-}
+// .btn-burger {
+//     display: none;
+    
+// }
 
 /*hero-section styles*/
 .hero {
@@ -424,6 +406,50 @@ a {
         }
         &__burger {
             display: block;
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: transparent;
+            position: relative;
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                left: 0px;
+                right: 0px;
+                width: 29px;
+                margin: 0 auto;
+                color: #FFF;
+            }
+            &::before {
+                height: auto;
+                border-top: 3px solid #fff;
+                border-bottom: 3px solid #fff;
+                top: 12px;
+                bottom: 12px;
+            }
+            &::after {
+                height: 3px;
+                background-color: #fff;
+                bottom: 0;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            &.is-active::before {
+                transform: rotate(45deg) translate(7px, 7px);
+                height: 3px;
+                border: none;
+                background: currentColor;
+                transition: transform 0.25s ease;
+            }
+            &.is-active::after {
+                transform: rotate(-45deg);
+                transition: transform 0.25s ease;
+            }
         }
         &__logo {
             &.is-active {
@@ -436,12 +462,12 @@ a {
             }
         }
     }
-    .btn-burger {
-        display: block;
-        &.is-ative {
+    // .btn-burger {
+    //     display: block;
+    //     &.is-ative {
 
-        }
-    }
+    //     }
+    // }
     .nav-mobile {
         display: none;
         &.is-active {
@@ -452,6 +478,12 @@ a {
             & ul{
                 list-style-type: none;
             }
+        }
+        &__link {
+            &:hover {
+                border-bottom: 2px solid #fff;
+            }
+            
         }
     }
     .menu {
@@ -500,6 +532,18 @@ a {
                 width: 100%;
             }
         }
+        .gallery {
+            padding-bottom: 25px;
+            &__list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            &__img:hover {
+                transform: none;
+            }
+            &__desc {
+                padding: 50px 0 30px;
+            }
+        }
 }
 
 @media screen and (max-width:375px) {
@@ -531,17 +575,17 @@ a {
             transform: translate(-50%, -90%);
         }
     }
-    .gallery {
-        padding-bottom: 25px;
-        &__list {
-            grid-template-columns: repeat(1, 1fr);
-        }
-        &__img:hover {
-            transform: none;
-        }
-        &__desc {
-            padding: 50px 0 30px;
-        }
-    }
+    // .gallery {
+    //     padding-bottom: 25px;
+    //     &__list {
+    //         grid-template-columns: repeat(1, 1fr);
+    //     }
+    //     &__img:hover {
+    //         transform: none;
+    //     }
+    //     &__desc {
+    //         padding: 50px 0 30px;
+    //     }
+    // }
     
 }
