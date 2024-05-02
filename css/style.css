@@ -9,7 +9,9 @@
   font-style: normal;
   font-display: block;
 }
-
+[class*="icon-"]:hover::before {
+  color: #B82121;
+}
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -30,6 +32,10 @@
   color: #e5e5e5;
 }
 .icon-telegram-1:before {
+  content: "\e900";
+  color: #3fa3ff;
+}
+.icon-telegram-1:hover:before {
   content: "\e900";
   color: #3fa3ff;
 }
@@ -69,7 +75,13 @@
   content: "\e908";
   color: #e5e5e5;
 }
+
 .icon-phone-call:before {
   content: "\e909";
   color: #fff;
 }
+
+/* .icon-instagram:hover:before {
+
+  color: #B82121;
+} */

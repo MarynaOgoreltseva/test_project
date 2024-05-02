@@ -10,12 +10,19 @@ $('#slider1').slick({
     {
       breakpoint: 1200,
       settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1
+      }
+      },
+      {
+      breakpoint: 900,
+      settings: {
         slidesToShow: 3,
         slidesToScroll: 1
       }
       },
     {
-      breakpoint: 900,
+      breakpoint: 768,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1
